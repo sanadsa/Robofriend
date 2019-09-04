@@ -4,9 +4,10 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, combineReducers } from 'redux';
 import { createLogger } from 'redux-logger';
 import thunkMiddleware from 'redux-thunk';
-import './index.css';
+import './index.css';0
 import * as serviceWorker from './serviceWorker';
 import App from './containers/App';
+import registerServiceWorker from './registerServiceWorker';
 import { searchRobots, requestRobots } from './reducers';
 import 'tachyons';
 
@@ -19,4 +20,5 @@ ReactDOM.render(
         <App />
     </Provider>, document.getElementById('root'));
 
-serviceWorker.unregister();
+// serviceWorker.register();
+registerServiceWorker();
